@@ -1,0 +1,152 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Filter Section */
+.filter {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10vw; /* Responsive gap */
+    
+}
+
+.status-filter,
+.sorting-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Task List Section */
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto; /* Allow horizontal scroll on smaller screens */
+}
+
+table {
+    width: 100%;
+    min-width: 600px; /* Ensure table doesn't shrink too much */
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    background-color: #4B4E6D;
+    color: aliceblue;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+/* Input and Button Styling */
+.task-name-input,
+.task-due-date,
+.priority-input {
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Limit to a maximum width */
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.button-container .btn,
+.add-tasks-btn,
+.clear-tasks-btn {
+    width: 80px; /* Consistent button size */
+    height: 25px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.add-tasks-btn,
+.clear-tasks-btn {
+    width: auto; /* Allow buttons to adapt to content */
+    padding: 0px 15px;
+}
+
+.clear-btn {
+    margin-top: 20px; /* Adds 20px space above the button */
+    padding: 10px 20px; /* Ensures consistent padding */
+    font-size: 1rem; /* Optional: Adjusts font size */
+    background-color: #84bcdc;
+    border: none;
+    color: white;
+    box-shadow: 1px 6px 12px rgba(154, 154, 154, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+    background-color: #4b7ea0; /* Change color on hover */
+}
+
+
+/* Icon Styling */
+.fa-trash {
+    color: rgb(239, 188, 188);
+}
+.fa-trash:hover {
+    color: rgb(241, 97, 97);
+}
+
+.fa-check {
+    color: rgb(127, 170, 127);
+}
+.fa-check:hover {
+    color: rgb(17, 116, 17);
+}
+
+.fa-pen-to-square {
+    color: rgb(182, 182, 241);
+}
+.fa-pen-to-square:hover {
+    color: rgb(118, 118, 237);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter {
+        flex-direction: column; /* Stack filters vertically */
+        align-items: center;
+    }
+
+    .status-filter,
+    .sorting-filter {
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .task-name-input,
+    .task-due-date,
+    .priority-input {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    table {
+        min-width: 100%; /* Allow table to shrink as needed */
+    }
+
+    th,
+    td {
+        padding: 5px;
+        font-size: 14px; /* Smaller font for mobile */
+    }
+
+    .btn {
+        width: auto; /* Adapt to content size */
+        padding: 8px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(237, 237, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    color: black;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 70%;
+    padding: 20px 20px 20px 20px;
+    
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 1px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title{
+    margin: 30px 0 40px 0;
+}
+
+.btn{
+    padding: 4px;
+    font-weight: 700;
+    background-color: #84bcdc;
+    border: none;
+    color: white;
+    box-shadow: 1px 6px 12px rgba(154, 154, 154, 0.1);
+    border-radius: 2px;
+}
+
+.btn:hover{
+    background-color: #4b7ea0;
+}
+
+.alert-red{
+    color: red;
+    background-color: rgb(252, 179, 179); 
+    height: 20px;   
+}
+
+.d-none{
+    display: none;
+}
+
+p{
+    background-color: rgb(255, 0, 0);
+    color: rgb(232, 197, 197);
+    text-transform: capitalize;
+    font-size: smaller;
+    padding: 5px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between fields */
+    width: auto; /* Ensure inputs stretch across available space */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Makes label text more readable */
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px 0 5px;
+}
+
+.btn.active-section {
+    background-color: #4ba08b;
+    color: #FFFFFF; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Shrink container width on small screens */
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Slightly smaller font size for buttons */
+        padding: 6px 12px;
+    }
+
+    p {
+        font-size: 0.8rem; /* Smaller text size for alerts */
+    }
+
+    .inputs {
+        gap: 15px; /* Reduce gap for smaller screens */
+    }
+
+    .alert-red {
+        font-size: 0.8rem;
+    }
+}
